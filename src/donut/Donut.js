@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 // import PropTypes from 'prop-types';
 import { Spring, config } from 'react-spring';
 
-// these will be extracted..
+// these will be extracted....
 function na(length, callback, ...args) {
   const arr = [];
   for (let i = 0; i < length; i++) {
@@ -68,6 +68,7 @@ class DonutSvg extends Component {
                   fontSize: o / 2,
                   opacity: d ? 1 : 0,
                   transform: `translate(0, ${o / 5}px)`,
+                  letterSpacing: 'normal',
                 }}
               >
                 {d}
