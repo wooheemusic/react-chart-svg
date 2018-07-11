@@ -43,13 +43,14 @@ class DonutSvg extends Component {
       c.push((m += rest[`s${i}`]));
     }
 
-    const h = half ? 0.5 : 1;
+    const h1 = half ? 0.5 : 1;
+    const vb = v || (half ? '-1.5 -1.5 3 1.7' : '-1.5 -1.5 3 3');
 
     return (
-      <svg viewBox={v || '-1.5 -1.5 3 3'} {...rest}>
+      <svg viewBox={vb} {...rest}>
         {na(l, (i) => {
-          const s = i === 0 ? 0 : c[i - 1] * h;
-          const e = i === l ? 1 : c[i] * h;
+          const s = i === 0 ? 0 : c[i - 1] * h1;
+          const e = i === l ? 1 : c[i] * h1;
           const d = data[i];
           return (
             <Fragment key={i.toString()}>

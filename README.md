@@ -13,15 +13,23 @@ npm install --save react-chart-svg
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import MyComponent from 'react-chart-svg'
+import MyComponent from "react-chart-svg";
+import { config } from "react-spring";
 
 class Example extends Component {
-  render () {
+  render() {
     return (
-      <MyComponent />
-    )
+      <Donut
+        half
+        outerRadius={0.3}
+        data={data}
+        colors={["#e9002d", "#23ac0e", "#ff7a00", "gray"]}
+        style={{ opacity: 1, width: "100%", height: "100%" }}
+        config={config.default}
+      />
+    );
   }
 }
 ```
