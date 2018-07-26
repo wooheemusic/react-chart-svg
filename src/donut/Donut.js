@@ -33,7 +33,7 @@ class DonutSvg extends Component {
       colors: cl,
       viewBox: v,
       half,
-      fontScale: f,
+      fontScale: f = 1,
       ...rest
     } = this.props;
     const l = data.length;
@@ -63,12 +63,12 @@ class DonutSvg extends Component {
               />
               <text
                 textAnchor="middle"
-                x={x((e + s) / 2)}
-                y={y((e + s) / 2)}
+                x={(x((e + s) / 2) * (3 - f)) / 2}
+                y={(y((e + s) / 2) * (3 - f)) / 2}
                 style={{
                   fontSize: (o * f) / 2,
                   opacity: d ? 1 : 0,
-                  transform: `translate(0, ${o / 5}px)`,
+                  transform: `translate(0, ${(o * f) / 5}px)`,
                   letterSpacing: 'normal',
                 }}
               >

@@ -49,7 +49,9 @@ class App extends Component {
             // config={{ tension: 20, friction: 60 }}
           />
           <Donut
-            outerRadius={0.5}
+            outerRadius={2}
+            viewBox="-2.5 -2.5 5 5"
+            fontScale={0.4}
             data={this.data[this.state.index]}
             colors={['blue']}
             style={{ opacity: 0.5, width: '100%' }}

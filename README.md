@@ -13,7 +13,7 @@ npm install --save react-chart-svg
 ## Usage
 
 ```jsx
-import React, { Componentm Fragment } from "react";
+import React, { Componentm, Fragment } from "react";
 
 import { Donut } from "react-chart-svg";
 import { config } from "react-spring";
@@ -60,15 +60,17 @@ export default class Example extends Component {
             colors={["red", "orange"]}
             style={{
               opacity: 0.5,
-              width: "100%",
+              width: "100%"
             }}
             // config={{ tension: 20, friction: 60 }}
           />
           <Donut
-            outerRadius={0.5}
+            outerRadius={2}
+            viewBox="-2.5 -2.5 5 5"
+            fontScale={0.4}
             data={this.data[this.state.index]}
             colors={["blue"]}
-            style={{ opacity: 0.5, width: "100%"}}
+            style={{ opacity: 0.5, width: "100%" }}
             isHalf
             config={{ tension: 20, friction: 60 }}
           />
