@@ -33,6 +33,7 @@ class DonutSvg extends Component {
       colors: cl,
       viewBox: v,
       half,
+      fontScale: f,
       ...rest
     } = this.props;
     const l = data.length;
@@ -65,7 +66,7 @@ class DonutSvg extends Component {
                 x={x((e + s) / 2)}
                 y={y((e + s) / 2)}
                 style={{
-                  fontSize: o / 2,
+                  fontSize: (o * f) / 2,
                   opacity: d ? 1 : 0,
                   transform: `translate(0, ${o / 5}px)`,
                   letterSpacing: 'normal',
